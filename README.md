@@ -23,4 +23,4 @@ Required Permissions: None.
 
 # Issues
 
-If you come across any issues, you can report them on this GitHub repo [here](https://github.com/AKP48Squared/akp48-plugin-irc-commands/issues).
+If you come across any issues, you can report them on this GitHub repo [here](https://github.com/AKP48Squared/irc-commands/issues).
