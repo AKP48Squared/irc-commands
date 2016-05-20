@@ -32,3 +32,4 @@ class IRCCommands extends BasicCommands {
 
 module.exports = IRCCommands;
 module.exports.type = 'MessageHandler';
+module.exports.pluginName = 'irc-commands';
