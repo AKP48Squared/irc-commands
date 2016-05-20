@@ -1,6 +1,6 @@
 {
   "name": "akp48-plugin-irc-commands",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IRC Commands plugin for AKP48.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +20,5 @@
   "bugs": {
     "url": "https://github.com/AKP48Squared/irc-commands/issues"
   },
-  "homepage": "https://github.com/AKP48Squared/irc-commands",
-  "license": "MIT"
+  "homepage": "https://github.com/AKP48Squared/irc-commands"
 }
