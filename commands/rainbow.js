@@ -5,10 +5,9 @@ function Rainbow() {
 }
 
 Rainbow.prototype.respond = function (context) {
-  context.noPrefix = true;
-  context.last = true; //forces rainbow output to take over response.
-  if(context.text.length) {
-    return c.rainbow(context.text);
+  context.setCustomData('noPrefix', true);
+  if(context.argText().length) {
+    return c.rainbow(context.argText());
   }
 
   return null;
