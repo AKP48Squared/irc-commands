@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/AKP48Squared/irc-commands/issues"
   },
-  "homepage": "https://github.com/AKP48Squared/irc-commands"
+  "homepage": "https://github.com/AKP48Squared/irc-commands",
+  "dependencies": {
+    "akp48-plugin-basic-commands": "^1.1.0"
+  }
 }
