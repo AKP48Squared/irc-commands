@@ -3,7 +3,7 @@ const LogicEngine = require('akp48-plugin-basic-commands').LogicEngine;
 
 class IRCCommands extends global.AKP48.pluginTypes.MessageHandler {
   constructor(AKP48) {
-    super(AKP48, 'RandomizationCommands');
+    super(AKP48, 'IRCCommands');
     this._data = {};
     this.logicEngine = null;
   }
