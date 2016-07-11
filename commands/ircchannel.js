@@ -3,9 +3,9 @@ function IRCChannel() {
 }
 
 IRCChannel.prototype.respond = function (context) {
-  var IRC = context.instance;
+  var IRC = context.instance();
   var chans = [];
-  var chanText = context.text.split(' ');
+  var chanText = context.argText().split(' ');
 
   // verify each chan is actually a channel
   for (var i = 0; i < chanText.length; i++) {
@@ -14,7 +14,7 @@ IRCChannel.prototype.respond = function (context) {
     }
   }
 
-  switch(context.command) {
+  switch(context.command()) {
     default:
     case 'chan':
       // Usage, for now. Later perhaps allow +/-channel
@@ -30,9 +30,22 @@ IRCChannel.prototype.respond = function (context) {
           if(!IRC._config.channels.includes(c)) {
             IRC._config.channels.push(c);
           }
-          var joinMsg = `Hello, everyone! I'm ${IRC._client.nick}! I respond to commands and generally try to be helpful. For more information, say '.help'!`;
-          IRC._client.say(c, joinMsg);
-          IRC._AKP48.sentMessage(c, joinMsg, {myNick: IRC._client.nick, instanceId: IRC._id});
+          if(!IRC._config.silentJoin) {
+            IRC._client.say(c, IRC.joinMsg);
+            var ctx = new global.AKP48.Context({
+              instance: IRC,
+              instanceType: 'irc',
+              nick: IRC._client.nick,
+              text: IRC.joinMsg,
+              to: c,
+              user: `PLUGIN`,
+              commandDelimiters: '',
+              myNick: IRC._client.nick,
+              permissions: []
+            });
+            IRC._AKP48.logMessage(ctx);
+          }
+
           IRC._AKP48.saveConfig(IRC._config, IRC._id, true);
         });
       });
