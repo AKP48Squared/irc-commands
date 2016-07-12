@@ -1,10 +1,7 @@
 language: node_js
 node_js:
   - "6"
-  - "5"
 install:
-  - npm install --dev
+  - npm install --only=dev
 script:
-  - npm test
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - istanbul cover node_modules/mocha/bin/mocha test/**/test-*.js --report lcovonly -- -R spec && codecov
