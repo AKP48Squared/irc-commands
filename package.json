@@ -4,7 +4,7 @@
   "description": "IRC Commands plugin for AKP48.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/**/test-*.js",
     "preversion": "git checkout master && git pull --ff-only",
     "postversion": "git push origin master --tags && npm publish"
   },
@@ -23,6 +23,13 @@
   },
   "homepage": "https://github.com/AKP48Squared/irc-commands",
   "dependencies": {
-    "akp48-plugin-basic-commands": "^1.1.0"
+    "akp48-context": "0.0.2",
+    "akp48-plugin-basic-commands": "^1.1.0",
+    "irc-colors": "^1.2.1"
+  },
+  "devDependencies": {
+    "akp48-context": "0.0.1",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }
