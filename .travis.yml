@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "6"
 install:
+  - npm install
   - npm install --only=dev
 script:
   - istanbul cover node_modules/mocha/bin/mocha test/**/test-*.js --report lcovonly -- -R spec && codecov
