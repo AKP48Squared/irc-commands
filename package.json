@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "mocha test/**/test-*.js",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha test/**/test-*.js --report lcovonly -- -R spec",
     "preversion": "git checkout master && git pull --ff-only",
     "postversion": "git push origin master --tags && npm publish"
   },
