@@ -1,5 +1,7 @@
 This plugin adds some commands for IRC servers to AKP48.
 
+[![Travis](https://img.shields.io/travis/AKP48Squared/irc-commands.svg?maxAge=3600&style=flat-square)](https://travis-ci.org/AKP48Squared/irc-commands) [![Codecov](https://img.shields.io/codecov/c/github/AKP48Squared/irc-commands.svg?maxAge=3600&style=flat-square)](https://codecov.io/gh/AKP48Squared/irc-commands) [![npm](https://img.shields.io/npm/dm/akp48-plugin-irc-commands.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/akp48-plugin-irc-commands) [![npm](https://img.shields.io/npm/dt/akp48-plugin-irc-commands.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/akp48-plugin-irc-commands) [![npm](https://img.shields.io/npm/v/akp48-plugin-irc-commands.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/akp48-plugin-irc-commands) [![npm](https://img.shields.io/npm/l/akp48-plugin-irc-commands.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/akp48-plugin-irc-commands) [![daft](https://img.shields.io/badge/daft-yes-ff69b4.svg?style=flat-square)](https://github.com/AKP48Squared/irc-commands)
+
 # Installation
 
 This plugin is included by default on new installations of AKP48Squared. No further installation is needed.
